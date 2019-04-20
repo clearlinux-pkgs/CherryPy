@@ -4,7 +4,7 @@
 #
 Name     : CherryPy
 Version  : 18.1.1
-Release  : 5
+Release  : 6
 URL      : https://files.pythonhosted.org/packages/1f/de/3327bd7168be762180924085fecef2e127d128f1d6157f88cd87fdac2971/CherryPy-18.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1f/de/3327bd7168be762180924085fecef2e127d128f1d6157f88cd87fdac2971/CherryPy-18.1.1.tar.gz
 Summary  : Object-Oriented HTTP framework
