@@ -4,7 +4,7 @@
 #
 Name     : CherryPy
 Version  : 18.4.0
-Release  : 12
+Release  : 13
 URL      : https://files.pythonhosted.org/packages/90/9f/c45f5a6508764369971c04de098359c5b8e2ed4850b8b536ee02f3f80fff/CherryPy-18.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/90/9f/c45f5a6508764369971c04de098359c5b8e2ed4850b8b536ee02f3f80fff/CherryPy-18.4.0.tar.gz
 Summary  : Object-Oriented HTTP framework
@@ -32,10 +32,8 @@ BuildRequires : virtualenv
 BuildRequires : zc.lockfile
 
 %description
-CherryPy Tutorials
-------------------
-This is a series of tutorials explaining how to develop dynamic web
-applications using CherryPy. A couple of notes:
+.. image:: https://img.shields.io/pypi/v/cherrypy.svg
+:target: https://pypi.org/project/cherrypy
 
 %package bin
 Summary: bin components for the CherryPy package.
@@ -68,6 +66,12 @@ python components for the CherryPy package.
 Summary: python3 components for the CherryPy package.
 Group: Default
 Requires: python3-core
+Provides: pypi(cherrypy)
+Requires: pypi(cheroot)
+Requires: pypi(jaraco.collections)
+Requires: pypi(more_itertools)
+Requires: pypi(portend)
+Requires: pypi(zc.lockfile)
 
 %description python3
 python3 components for the CherryPy package.
@@ -75,14 +79,14 @@ python3 components for the CherryPy package.
 
 %prep
 %setup -q -n CherryPy-18.4.0
+cd %{_builddir}/CherryPy-18.4.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572804511
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583533030
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
